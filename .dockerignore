@@ -1,0 +1,31 @@
+# Git
+.git
+.gitignore
+.github
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Dependencies
+vendor
+
+# Tests
+.phpunit.result.cache
+tests
+
+# Documentation
+README.md
+LICENSE
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Misc
+.DS_Store
+*.log
+test.html
