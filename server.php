@@ -9,7 +9,7 @@ use App\EchoServer;
 use Revolt\EventLoop;
 
 $host = $argv[1] ?? '127.0.0.1';
-$port = (int) ($argv[2] ?? 8080);
+$port = (int) ($argv[2] ?? 80);
 
 $server = new EchoServer($host, $port);
 
