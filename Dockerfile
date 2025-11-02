@@ -52,7 +52,7 @@ CMD ["./vendor/bin/phpunit"]
 FROM base AS prod
 
 # Expose default port
-EXPOSE 8080
+EXPOSE 80
 
 # Start the server
-CMD ["php", "server.php", "0.0.0.0", "8080"]
+CMD ["php", "server.php", "0.0.0.0", "80"]
