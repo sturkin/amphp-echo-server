@@ -2,7 +2,7 @@ name: CD to AWS ECS (Fargate)
 
 on:
   workflow_run:
-    workflows: ["CI"] # або прибери цей блок, якщо хочеш запускати на push
+    workflows: ["CI (Docker, no cache)"] # або прибери цей блок, якщо хочеш запускати на push
     types: [completed]
 
 jobs:
