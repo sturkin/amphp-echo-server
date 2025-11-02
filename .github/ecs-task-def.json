@@ -1,0 +1,30 @@
+{
+  "family": "amphp-echo-server",
+  "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::823899399209:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::823899399209:role/ecsTaskExecutionRole",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "containerDefinitions": [
+    {
+      "name": "amphp-echo-container",
+      "image": "823899399209.dkr.ecr.eu-central-1.amazonaws.com/sturkin/amphp-echo-server:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/amphp-echo-server",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}
