@@ -7,6 +7,7 @@ RUN apk add --no-cache \
     unzip \
     zip \
     libzip-dev \
+    linux-headers \
     && docker-php-ext-install zip pcntl sockets
 
 # Install Composer
